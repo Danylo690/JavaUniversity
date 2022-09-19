@@ -80,20 +80,10 @@ public class DirectoryOfEnterprises {
 				.stream()
 				.filter((n) -> (n.GetPhoneNumber() % 2) == 1)
 				.filter((n) -> n.GetPhoneNumber() > inputPhoneNumber);
-		
-		System.out.print("Odd values that greater than input value:\n");
-		oddValues.forEach((n) -> System.out.print(n.GetName() + ": " + n.GetPhoneNumber() + "\n"));
 	}
 	
 	public void EvenValue(int inputPhoneNumber)
 	{
 		//Все чётные номера, которые больше введеного значения
-		Stream<Enterprise> oddValues = ListOfEnterprises
-				.stream()
-				.filter((n) -> (n.GetPhoneNumber() % 2) == 0)
-				.filter((n) -> n.GetPhoneNumber() > inputPhoneNumber);
-		
-		System.out.print("Even values that greater than input value:\n");
-		oddValues.forEach((n) -> System.out.print(n.GetName() + ": " + n.GetPhoneNumber() + "\n"));
 	}
 }

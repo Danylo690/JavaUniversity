@@ -93,7 +93,7 @@ public class DirectoryOfEnterprises {
 				.filter((n) -> (n.GetPhoneNumber() % 2) == 0)
 				.filter((n) -> n.GetPhoneNumber() > inputPhoneNumber);
 		
-		System.out.print("Even values that greater than input value:\n");
+		System.out.print("Even values that greater than input value:\\n");
 		oddValues.forEach((n) -> System.out.print(n.GetName() + ": " + n.GetPhoneNumber() + "\n"));
 	}
 }

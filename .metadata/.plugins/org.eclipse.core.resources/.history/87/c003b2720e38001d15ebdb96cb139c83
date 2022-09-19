@@ -1,18 +1,13 @@
 public class Enterprise {
 	
-	private String Name;
+	public String Name;
 	
-	private int PhoneNumber;
+	public int PhoneNumber;
 	
 	public Enterprise(String name, int phoneNumber)
 	{
 		Name = name;
 		PhoneNumber = phoneNumber;
-	}
-	
-	public String GetName()
-	{
-		return Name;
 	}
 	
 	public int GetPhoneNumber()

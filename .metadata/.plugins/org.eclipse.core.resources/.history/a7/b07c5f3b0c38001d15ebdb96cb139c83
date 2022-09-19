@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class Demo {
 	
@@ -15,7 +16,7 @@ public class Demo {
 					+ "\n3.Determine the difference between the maximum and minimum values;"
 					+ "\n4.Sort in descending order of phone numbers;"
 					+ "\n5.Display data on odd values of phone numbers greater than input's value;"
-					+ "\n6.Display data on even values of phone numbers greater than input's value;"
+					+ "\n6.Display data on even values ​​of phone numbers greater than input's value;"
 					+ "\n7.Exit.");
 			System.out.print("Select menu item: ");
 			int menu = sc.nextInt();

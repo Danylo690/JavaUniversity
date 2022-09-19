@@ -16,9 +16,7 @@ public class DirectoryOfEnterprises {
 	public void AddEnterprise(String name, int phoneNumber)
 	{
 		//Проверка есть ли в списке элемент с таким номером телефона
-		Enterprise enterprise = ListOfEnterprises
-				.stream()
-				.filter((n) -> n.GetPhoneNumber() == phoneNumber)
+		Enterprise enterprise = ListOfEnterprises.stream().filter((n) -> n.PhoneNumber == phoneNumber)
 				.findAny()
 				.orElse(null);
 		//Если отсутствует, то добавляем в список новый элемент
@@ -42,13 +40,13 @@ public class DirectoryOfEnterprises {
 		//Получение минимального значения
 		Optional<Integer> minValue = ListOfEnterprises
 				.stream()
-				.map((n) -> n.GetPhoneNumber())
+				.map((n) -> n.PhoneNumber)
 				.min(Integer::compare);
 		
 		//Получение максимального значения
 		Optional<Integer> maxValue = ListOfEnterprises
 				.stream()
-				.map((n) -> n.GetPhoneNumber())
+				.map((n) -> n.PhoneNumber)
 				.max(Integer::compare);
 		
 		//Нахождение разницы максимального и минимального значений
@@ -68,32 +66,16 @@ public class DirectoryOfEnterprises {
 		Stream<Enterprise> sortedList = ListOfEnterprises
 				.stream()
 				.sorted(Comparator.comparing(Enterprise::GetPhoneNumber).reversed());
-		
-		System.out.print("Sortered list: \n");
-		sortedList.forEach((n) -> System.out.print(n.GetName() + ": " + n.GetPhoneNumber() + "\n"));
+		sortedList.forEach((n) -> System.out.print(false));
 	}
 	
 	public void OddValue(int inputPhoneNumber)
 	{
 		//Все нечётные номера, которые больше введеного значения
-		Stream<Enterprise> oddValues = ListOfEnterprises
-				.stream()
-				.filter((n) -> (n.GetPhoneNumber() % 2) == 1)
-				.filter((n) -> n.GetPhoneNumber() > inputPhoneNumber);
-		
-		System.out.print("Odd values that greater than input value:\n");
-		oddValues.forEach((n) -> System.out.print(n.GetName() + ": " + n.GetPhoneNumber() + "\n"));
 	}
 	
 	public void EvenValue(int inputPhoneNumber)
 	{
 		//Все чётные номера, которые больше введеного значения
-		Stream<Enterprise> oddValues = ListOfEnterprises
-				.stream()
-				.filter((n) -> (n.GetPhoneNumber() % 2) == 0)
-				.filter((n) -> n.GetPhoneNumber() > inputPhoneNumber);
-		
-		System.out.print("Even values that greater than input value:\n");
-		oddValues.forEach((n) -> System.out.print(n.GetName() + ": " + n.GetPhoneNumber() + "\n"));
 	}
 }

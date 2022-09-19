@@ -1,0 +1,51 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class DirectoryOfEnterprises {
+	
+	public ArrayList<Enterprise> ListOfEnterprises = new ArrayList<Enterprise>();
+	
+	public void AddEnterprise(String name, int phoneNumber)
+	{
+		//Проверка есть ли в списке элемент с таким номером телефона
+		Enterprise enterprise = ListOfEnterprises.stream().filter((n) -> n.PhoneNumber == phoneNumber)
+				.findAny()
+				.orElse(null);
+		//Если отсутствует, то добавляем в список новый элемент
+		if(enterprise == null)
+		{
+			ListOfEnterprises.add(new Enterprise(name, phoneNumber));
+		}
+	}
+	
+	public void PrintAllEnterprises()
+	{
+		//Вывод на экран всех элементов списка
+		System.out.print("All enterprises: \n");
+		ListOfEnterprises.stream().forEach((n) -> { System.out.print(n.Name + ": " + n.PhoneNumber + "\n"); });
+	}
+	
+	public void Difference()
+	{
+		//Получение минимального значения
+		Optional<Integer> minValue = ListOfEnterprises.stream().min(Integer::compare);
+		//Получение максимального значения
+		
+		//Нахождение разницы максимального и минимального значений
+	}
+	
+	public void SortList()
+	{
+		//Сортировка элементов по убыванию номеров телефона
+	}
+	
+	public void OddValue(int inputPhoneNumber)
+	{
+		//Все нечётные номера, которые больше введеного значения
+	}
+	
+	public void EvenValue(int inputPhoneNumber)
+	{
+		//Все чётные номера, которые больше введеного значения
+	}
+}
