@@ -62,7 +62,6 @@ public class Demo {
 				}
 				case 7:
 				{
-					sc.close();
 					return;
 				}
 			}
