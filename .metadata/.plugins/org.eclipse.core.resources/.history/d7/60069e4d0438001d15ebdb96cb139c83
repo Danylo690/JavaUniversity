@@ -1,0 +1,4 @@
+public class Enterprise {
+	String Name;
+	int PhoneNumber;
+}

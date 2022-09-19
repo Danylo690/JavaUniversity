@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class DirectoryOfEnterprises {
+	
+	public ArrayList<Enterprise> ListOfEnterprises = new ArrayList<Enterprise>();
+	
+	public void AddEnterprise(String name, int phoneNumber)
+	{
+		Enterprise enterprise = ListOfEnterprises.stream().filter((n) -> n.PhoneNumber == phoneNumber)
+				.findAny()
+				.orElse(null);
+		
+		if(enterprise == null)
+		{
+			ListOfEnterprises.add(new Enterprise(name, phoneNumber));
+		}
+	}
+	
+	public void PrintAllEnterprises()
+	{
+		System.out.print("All enterprises: \n");
+		ListOfEnterprises.stream().forEach((n) -> { System.out.print(n.Name + ": " + n.PhoneNumber + "\n"); });
+		System.out.println();
+	}
+}

@@ -1,0 +1,67 @@
+import java.util.*;
+import java.io.*;
+
+public class Demo {
+	public static void main(String[] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		DirectoryOfEnterprises directory = new DirectoryOfEnterprises();
+		String phone, surname;
+		while(true)
+		{
+			System.out.println("---------------------------------");
+			System.out.println("1.Add enterprise;"
+					+ "\n2.Determine the difference between the maximum and minimum values;"
+					+ "\n3.Sort in descending order of phone numbers;"
+					+ "\n4.Display data on odd numbers of phone numbers;"
+					+ "\n5.Display data on even values ​​of phone numbers;"
+					+ "\n5.Exit.");
+			System.out.print("Оберіть пункт меню: ");
+			int menu = sc.nextInt();
+			System.out.println("---------------------------------");
+			switch (menu)
+			{
+				case 1:
+				{
+					System.out.print("Введіть номер телефону: ");
+					phone = sc.next();
+					System.out.print("Введіть прізвище: ");
+					surname = sc.next();
+					phonebook.AddRecord(phone, surname);
+					break;
+				}
+				case 2:
+				{
+					System.out.print("Введіть номер телефону: ");
+					phone = sc.next();
+					phonebook.DeleteRecordByPhone(phone);
+					break;
+				}
+				case 3:
+				{
+					System.out.print("Введіть прізвище: ");
+					surname = sc.next();
+					ArrayList<String> result = phonebook.FindBySurname(surname);
+					if(!result.isEmpty())
+					{
+						result.forEach(x -> System.out.println("Телефон: " + x));
+					}
+					break;
+				}
+				case 4:
+				{
+					System.out.print("Введіть номер телефону: ");
+					phone = sc.next();
+					String result = phonebook.FindByPhone(phone);
+					System.out.println("Прізвище: " + result);
+					break;
+				}
+				case 5:
+				{
+					return;
+				}
+			}
+		}
+	}
+}

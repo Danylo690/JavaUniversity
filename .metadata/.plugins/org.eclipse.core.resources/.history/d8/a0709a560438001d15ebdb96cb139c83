@@ -1,0 +1,11 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class DirectoryOfEnterprises {
+	ArrayList<Enterprise> ListOfEnterprises = new ArrayList<Enterprise>();
+	
+	public void AddEnterprise(String name, int phoneNumber)
+	{
+		
+	}
+}

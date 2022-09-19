@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class DirectoryOfEnterprises {
+	ArrayList<Enterprise> ListOfEnterprises = new ArrayList<Enterprise>();
+	
+	public void AddEnterprise(String name, int phoneNumber)
+	{
+		Enterprise enterprise = ListOfEnterprises.stream().filter((n) -> n.PhoneNumber == phoneNumber)
+				.findAny()
+				.orElse(null);
+		
+		if(enterprise == null)
+		{
+			ListOfEnterprises.add(new Enterprise(name, phoneNumber));
+		}
+	}
+}
