@@ -27,7 +27,7 @@ public class Demo {
 					System.out.print("Enter the name: ");
 					String name = sc.next();
 					System.out.print("Enter the phone number: ");
-					int phoneNumber = Integer.parseInt(sc.next());
+					int phoneNumber = sc.nextInt();
 					directory.AddEnterprise(name, phoneNumber);
 					break;
 				}
@@ -49,14 +49,14 @@ public class Demo {
 				case 5:
 				{
 					System.out.print("Enter the phone number: ");
-					int phoneNumber = Integer.parseInt(sc.next());
+					int phoneNumber = sc.nextInt();
 					directory.OddValue(phoneNumber);
 					break;
 				}
 				case 6:
 				{
 					System.out.print("Enter the phone number: ");
-					int phoneNumber = Integer.parseInt(sc.next());
+					int phoneNumber = sc.nextInt();
 					directory.EvenValue(phoneNumber);
 					break;
 				}
