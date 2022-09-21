@@ -894,3 +894,9 @@ java.lang.NoClassDefFoundError: Could not initialize class com.thoughtworks.xstr
 Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Cannot access defaults field of Properties [in thread "main"]
 	at com.thoughtworks.xstream.converters.collections.PropertiesConverter.<clinit>(PropertiesConverter.java:46)
 	... 65 more
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-21 12:18:14.359
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jdt.doc.user_3.15.1500.v20220829-1143 [222]'. The index should be rebuilt with Lucene 8.4.1
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-21 12:18:14.366
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.25.0.v20220830-0901 [336]'. The index should be rebuilt with Lucene 8.4.1
