@@ -75,9 +75,6 @@ public class State implements JurisdictionUnit{
 	public void printDeatilInformation() {
 		System.out.print(this.toString());
 		Settlements.stream().forEach((n) -> n.printDeatilInformation());
-//		Cities.stream().forEach((n) -> n.printDeatilInformation());
-//		Towns.stream().forEach((n) -> n.printDeatilInformation());
-//		Villages.stream().forEach((n) -> n.printDeatilInformation());
 	}
 	@Override
 	public String toString()
