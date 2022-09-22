@@ -1151,3 +1151,6 @@ Java Model Exception: Error in Java Model (code 969): [Working copy] MatrixTest.
 
 !ENTRY org.eclipse.jdt.junit 4 0 2022-09-22 18:24:25.353
 !MESSAGE No tests found with test runner 'JUnit 5'.
+
+!ENTRY org.eclipse.jdt.junit 4 0 2022-09-22 19:15:37.740
+!MESSAGE No tests found with test runner 'JUnit 5'.

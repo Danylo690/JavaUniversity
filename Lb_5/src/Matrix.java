@@ -31,8 +31,8 @@ public class Matrix {
 	}
 	public double findMaxElem(double[][] matrix) {
 		double max = matrix[0][0];
-		for(int i = 0; i < len; i++) {
-			for(int j = 0; j < len; j++) {
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = 0; j < matrix[i].length; j++) {
 				if (max < matrix[i][j]) {
 					max = matrix[i][j];
 					iMaxElem = i;
@@ -43,7 +43,7 @@ public class Matrix {
 		return max;
 	}
 	public void swapColls(int jPos) {
-		for(int i = 0; i < len; i++) {
+		for(int i = 0; i < matrix.length; i++) {
 			for(int j = jPos; j > 0; j--) {
 			   double temp = matrix[i][j-1];
 		       matrix[i][j-1] = matrix[i][j];
